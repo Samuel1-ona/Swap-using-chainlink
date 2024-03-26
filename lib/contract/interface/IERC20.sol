@@ -9,12 +9,12 @@ pragma solidity ^0.8.9;
 interface IERC20 {
 
     /**
-     * @dev Returns the value of tokens owned by account.
+     * @dev Returns the value of tokens owned by `account`.
      */
     function balanceOf(address account) external view returns (uint256);
 
     /**
-     * @dev Moves a value amount of tokens from the caller's account to to.
+     * @dev Moves a `value` amount of tokens from the caller's account to `to`.
      *
      * Returns a boolean value indicating whether the operation succeeded.
      *
@@ -23,8 +23,8 @@ interface IERC20 {
     function transfer(address to, uint256 value) external returns (bool);
 
     /**
-     * @dev Returns the remaining number of tokens that spender will be
-     * allowed to spend on behalf of owner through {transferFrom}. This is
+     * @dev Returns the remaining number of tokens that `spender` will be
+     * allowed to spend on behalf of `owner` through {transferFrom}. This is
      * zero by default.
      *
      * This value changes when {approve} or {transferFrom} are called.
@@ -32,7 +32,7 @@ interface IERC20 {
     function allowance(address owner, address spender) external view returns (uint256);
 
     /**
-     * @dev Sets a value amount of tokens as the allowance of spender over the
+     * @dev Sets a `value` amount of tokens as the allowance of `spender` over the
      * caller's tokens.
      *
      * Returns a boolean value indicating whether the operation succeeded.
@@ -49,8 +49,8 @@ interface IERC20 {
     function approve(address spender, uint256 value) external returns (bool);
 
     /**
-     * @dev Moves a value amount of tokens from from to to using the
-     * allowance mechanism. value is then deducted from the caller's
+     * @dev Moves a `value` amount of tokens from `from` to `to` using the
+     * allowance mechanism. `value` is then deducted from the caller's
      * allowance.
      *
      * Returns a boolean value indicating whether the operation succeeded.
